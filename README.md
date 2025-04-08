@@ -12,17 +12,27 @@ This repository is training on creating a CI pipeline using GitHub Actions.
 
 To manage the project, use the following npm commands:
 
-- **Run the application**:  
+- **Install the application**:
+  ```bash
+  npm ci
+  ```
+
+- **Run the application**:
   ```bash
   npm start
   ```
 
-- **Build the application**:  
+- **Test the application**:
+  ```bash
+  npm test
+  ```
+
+- **Build the application**:
   ```bash
   npm run build
   ```
 
-- **Lint the code**:  
+- **Lint the code**:
   ```bash
   npm run lint
   ```
