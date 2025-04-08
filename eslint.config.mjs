@@ -3,4 +3,5 @@ export default {
     semi: ['error', 'always'],
     quotes: ['error', 'single'], 
   },
+  ignores: ['dist/**'],
 };
