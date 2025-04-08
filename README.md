@@ -8,3 +8,21 @@ This repository is training on creating a CI pipeline using GitHub Actions.
 3. Define a workflow to build the application, run tests, and perform linting.
 4. Fix any errors encountered during the process.
 
+### Running, Building, and Linting the Project
+
+To manage the project, use the following npm commands:
+
+- **Run the application**:  
+  ```bash
+  npm start
+  ```
+
+- **Build the application**:  
+  ```bash
+  npm run build
+  ```
+
+- **Lint the code**:  
+  ```bash
+  npm run lint
+  ```
