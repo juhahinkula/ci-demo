@@ -1,17 +1,17 @@
 class Calculator {
-  add(a, b) {
+  add(a: number, b: number) {
     return a + b;
   }
 
-  subtract(a, b) {
+  subtract(a: number, b: number) {
     return a - b;
   }
 
-  multiply(a, b) {
+  multiply(a: number, b: number) {
     return a * b;
   }
 
-  divide(a, b) {
+  divide(a: number, b: number) {
     if (b === 0) {
       throw new Error('Division by zero')
     }
@@ -19,4 +19,4 @@ class Calculator {
   }
 }
 
-module.exports = Calculator;
+export default Calculator;

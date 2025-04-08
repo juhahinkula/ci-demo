@@ -1,5 +1,5 @@
-const express = require('express');
-const Calculator = require('./calculator');
+import express from 'express';
+import Calculator from './calculator';
 
 const app = express();
 app.use(express.json());
@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
 app.post('/calculate', (req, res) => {
   try {
     const { operation, a, b } = req.body;
-    let result;
+    let result: number;
 
     switch (operation) {
       case 'add':
@@ -29,12 +29,13 @@ app.post('/calculate', (req, res) => {
         result = calculator.divide(a, b);
         break;
       default:
-        return res.status(400).json({ error: 'Invalid operation' });
+        res.status(400).json({ error: 'Invalid operation' });
+        return;
     }
 
     res.json({ result });
   } catch (error) {
-    res.status(400).json({ error: error.message });
+    res.status(400).json({ error: (error as Error).message });
   }
 });
 
@@ -46,4 +47,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = app;
+export default app;

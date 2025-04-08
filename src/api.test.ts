@@ -1,5 +1,6 @@
-const request = require('supertest');
-const app = require('../src/app');
+import { describe, test } from '@jest/globals';
+import request from 'supertest';
+import app from './app';
 
 describe('Calculator API', () => {
   test('GET / should return status message', async () => {
@@ -12,7 +13,7 @@ describe('Calculator API', () => {
     const response = await request(app)
       .post('/calculate')
       .send({ operation: 'add', a: 5, b: 3 });
-    
+
     expect(response.status).toBe(200);
     expect(response.body).toHaveProperty('result', 8);
   });
@@ -21,7 +22,7 @@ describe('Calculator API', () => {
     const response = await request(app)
       .post('/calculate')
       .send({ operation: 'subtract', a: 5, b: 3 });
-    
+
     expect(response.status).toBe(200);
     expect(response.body).toHaveProperty('result', 3);
   });
@@ -30,7 +31,7 @@ describe('Calculator API', () => {
     const response = await request(app)
       .post('/calculate')
       .send({ operation: 'invalid', a: 5, b: 3 });
-    
+
     expect(response.status).toBe(400);
     expect(response.body).toHaveProperty('error', 'Invalid operation');
   });
@@ -39,7 +40,7 @@ describe('Calculator API', () => {
     const response = await request(app)
       .post('/calculate')
       .send({ operation: 'divide', a: 5, b: 0 });
-    
+
     expect(response.status).toBe(400);
     expect(response.body).toHaveProperty('error', 'Division by zero');
   });
