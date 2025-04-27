@@ -8,7 +8,7 @@ This repository is training on creating a CI pipeline using GitHub Actions.
 3. Define a workflow to:
  - build the application
  - run tests
- - perform linting.
+ - perform linting
 5. Fix any errors encountered during the process.
 
 ### Running, Building, and Linting the Project
