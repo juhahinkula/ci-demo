@@ -7,9 +7,17 @@ app.use(express.json());
 const calculator = new Calculator();
 
 app.get('/', (req, res) => {
-  res.json({ message: "Calculator API is running" });
+  res.json({ message: 'Calculator API is running' });
 });
 
+/*
+* Endpoint to perform calculations
+* body: {
+*   operation: 'add' | 'subtract' | 'multiply' | 'divide',
+*   a: number,
+*   b: number
+* } 
+*/
 app.post('/calculate', (req, res) => {
   try {
     const { operation, a, b } = req.body;
