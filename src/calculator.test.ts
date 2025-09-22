@@ -1,4 +1,4 @@
-import Calculator from "./calculator";
+import Calculator from './calculator';
 
 describe('Calculator', () => {
   let calculator: Calculator;
@@ -16,7 +16,7 @@ describe('Calculator', () => {
   test('should subtract two numbers correctly', () => {
     expect(calculator.subtract(5, 3)).toBe(2);
     expect(calculator.subtract(1, 1)).toBe(0);
-    expect(calculator.subtract(0, 5)).toBe(-3);
+    expect(calculator.subtract(0, 5)).toBe(-5);
   });
 
   test('should multiply two numbers correctly', () => {

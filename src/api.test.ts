@@ -24,7 +24,7 @@ describe('Calculator API', () => {
       .send({ operation: 'subtract', a: 5, b: 3 });
 
     expect(response.status).toBe(200);
-    expect(response.body).toHaveProperty('result', 3);
+    expect(response.body).toHaveProperty('result', 2);
   });
 
   test('POST /calculate should return error for invalid operation', async () => {

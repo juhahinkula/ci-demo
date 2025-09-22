@@ -47,7 +47,7 @@ app.post('/calculate', (req, res) => {
   }
 });
 
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 3000;
 
 if (require.main === module) {
   app.listen(PORT, () => {
