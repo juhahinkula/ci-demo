@@ -6,7 +6,7 @@ describe('Calculator API', () => {
   test('GET / should return status message', async () => {
     const response = await request(app).get('/');
     expect(response.status).toBe(200);
-    expect(response.body).toHaveProperty('message', 'Calculator API is running');
+    expect(response.body).toHaveProperty('message', 'Calculator API is running again');
   });
 
   test('POST /calculate should add two numbers', async () => {
